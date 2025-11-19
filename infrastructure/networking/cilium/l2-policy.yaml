@@ -5,8 +5,9 @@ metadata:
   namespace: kube-system
 spec:
   interfaces:
+    - enp5s0
     - eth.*
-    - enp.*
+    - enp*.*
     - ens.*
     - wlan.*
     - wlp.*
