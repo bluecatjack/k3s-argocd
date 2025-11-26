@@ -1,5 +1,5 @@
 cluster:
-  name: nuc
+  name: guilder
   id: 1
 kubeProxyReplacement: true
 k8sServiceHost: 10.10.10.12
