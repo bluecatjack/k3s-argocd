@@ -6,10 +6,7 @@ metadata:
 spec:
   interfaces:
     - enp5s0
-    - eth.*
-    - enp*.*
-    - ens.*
-    - wlan.*
-    - wlp.*
+    - enp2s0
+    - enp1s0
   loadBalancerIPs: true
   externalIPs: true
