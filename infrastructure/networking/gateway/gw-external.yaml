@@ -3,6 +3,8 @@ kind: Gateway
 metadata:
   name: gateway-external
   namespace: gateway
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-dns
 spec:
   addresses:
   - type: IPAddress
@@ -12,19 +14,19 @@ spec:
     - name: http
       protocol: HTTP
       port: 80
-      hostname: "*.guilder.moonsuit.org"
+      hostname: "*.moonsuit.org"
       allowedRoutes:
         namespaces:
           from: All
     - name: https
       protocol: HTTPS
       port: 443
-      hostname: "*.guilder.moonsuit.org"
+      hostname: "*.moonsuit.org"
       tls:
         certificateRefs:
-          - name: cert-guilder
+          - name: le-cert
             kind: Secret
-            group: "" # required
+            group: ""
       allowedRoutes:
         namespaces:
           from: All
